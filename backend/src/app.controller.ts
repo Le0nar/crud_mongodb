@@ -16,7 +16,6 @@ export class AppController {
     @UseInterceptors(FileInterceptor('file'))
     handleUpload (@UploadedFile() file: Express.Multer.File) {
 
-    console.log('file', file);
-    return `Uploaded`
+    return this.appService.handleUpload(file)
   }
 }
