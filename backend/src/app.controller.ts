@@ -11,7 +11,6 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  // TODO: add service for handle image and set result to mongodb
   @Post('/file')
     @UseInterceptors(FileInterceptor('file'))
     handleUpload (@UploadedFile() file: Express.Multer.File) {

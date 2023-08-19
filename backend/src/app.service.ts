@@ -8,9 +8,12 @@ export class AppService {
   }
 
   handleUpload(file: Express.Multer.File) {
-    recognizeFace()
+    const isFaceRecognized = recognizeFace();
+    console.log('isFaceRecognized', isFaceRecognized)
 
+    // TODO: add service for handle image and set result to mongodb
     // TODO: save in db here
-    return ''
+    //TODO: return to FE isFaceRecognized or not
+    return '';
   }
 }
