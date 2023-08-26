@@ -18,8 +18,8 @@ function App() {
 
     var data = new FormData()
     data.append('file', file)
-    
-    fetch('http://localhost:4000/file', {
+
+    fetch('http://localhost:4000/verification/file', {
       method: 'POST',
       body: data
     })
